@@ -11,6 +11,9 @@ env:
     ANYKERNEL: "https://github.com/NFS-Project/AnyKernel3.git"
     TG_TOKEN: "ENCRYPTED[4548ed54125ed96f671e9293f5dae83eb2ff9bd7f830a3669a230c3b520251c2db68741624a40873eaf04c7b833f98c6]"
     TG_CHAT_ID: "ENCRYPTED[e209410340316d4a43d7428f1b6950c7f8261333ee89ca0f6091893fd874f9704ad6b6cb7cb67b0176dc3bbb883d027f]"
+    CREDENTIALS: "ENCRYPTED[7b0cb220da6eb51926be1438f9f8628f6c1a9d9d127d1ae3de567ec633ae646f6dddd7510a6091afb4db3e8b43555373]"
+    USER: "ENCRYPTED[18e7554cabc2e948fa55496ab17382dea46581db13cc7abab1587b3f1f1b8225bf1da80ba20d6765ee919a21f822e16d]"
+    EMAIL: "ENCRYPTED[3fec25c85e56ca9e04429196b20552d51b941537dcdc72795aef03868adf874d33fed5be568f09a4da784ebac52b5e4b]"
 
 task:
   name: "Kernel Build.."
@@ -19,6 +22,12 @@ task:
       image: anggit86/docker:cirrus
       cpu: 8
       memory: 32G
+
+  Private-repo_script:
+     - git config --global user.name "$USER"
+     - git config --global user.email "$EMAIL"
+     - echo "$CREDENTIALS" > ~/.git-credentials
+     - git config --global credential.helper store --file=~/.git-credentials 
 
   Sync_script:
       - ./download.sh
