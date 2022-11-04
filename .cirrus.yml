@@ -1,16 +1,16 @@
 env:
-    DEVICE_CODENAME: rosy
+    DEVICE_CODENAME: whyred
     BUILD_USER: xiaomi
-    BUILD_HOST: rosy
-    KERNEL_SOURCE: https://github.com/NFS-Project/android_kernel_xiaomi_rosy
-    KERNEL_BRANCH: thirteen
+    BUILD_HOST: whyred
+    KERNEL_SOURCE: https://github.com/IQ-7/kernel_xiaomi_whyred
+    KERNEL_BRANCH: 12
     TOOLCHAIN_SOURCE: https://pf.osdn.net/gitroot/n/nf/nfs86/NFS-clang.git
     TOOLCHAIN_BRANCH: master
     CIRRUS_CLONE_DEPTH: 1
     CIRRUS_WORKING_DIR: /tmp/cirrus-ci-build
     ANYKERNEL: "https://github.com/NFS-Project/AnyKernel3.git"
-    TG_TOKEN: "ENCRYPTED[!d52ab360b3e8517a18c20d86dac6f328c67670b9ed96c668a5871179c40a24f1bd8c92e233558c1beeda79bad6cf316d!]"
-    TG_CHAT_ID: "ENCRYPTED[!f1e4e3d269d43632542852d81b136dd2d40e66a0686574e493ddce5d86989830cf6fbac58494c33421c9ecf70dfe3fe8!]"
+    TG_TOKEN: "ENCRYPTED[4548ed54125ed96f671e9293f5dae83eb2ff9bd7f830a3669a230c3b520251c2db68741624a40873eaf04c7b833f98c6]"
+    TG_CHAT_ID: "ENCRYPTED[e209410340316d4a43d7428f1b6950c7f8261333ee89ca0f6091893fd874f9704ad6b6cb7cb67b0176dc3bbb883d027f]"
 
 task:
   name: "Kernel Build.."

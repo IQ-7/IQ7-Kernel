@@ -2,9 +2,9 @@
 
 # Main Declaration
 function env() {
-export KERNEL_NAME=MRT-Kernel
+export KERNEL_NAME=SkyLark-Aurora-whyred
 KERNEL_ROOTDIR=$CIRRUS_WORKING_DIR/$DEVICE_CODENAME
-DEVICE_DEFCONFIG=rosy-perf_defconfig
+DEVICE_DEFCONFIG=whyred_defconfig
 CLANG_ROOTDIR=$CIRRUS_WORKING_DIR/CLANG
 CLANG_VER="$("$CLANG_ROOTDIR"/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')"
 LLD_VER="$("$CLANG_ROOTDIR"/bin/ld.lld --version | head -n 1)"
