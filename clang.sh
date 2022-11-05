@@ -2,7 +2,7 @@
 
 # Main Declaration
 function env() {
-export KERNEL_NAME=SkyLark-Aurora-whyred
+export KERNEL_NAME=QuickSilveR-whyred
 KERNEL_ROOTDIR=$CIRRUS_WORKING_DIR/$DEVICE_CODENAME
 DEVICE_DEFCONFIG=whyred_defconfig
 CLANG_ROOTDIR=$CIRRUS_WORKING_DIR/CLANG
